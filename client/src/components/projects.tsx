@@ -36,14 +36,14 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-slate-50">
+    <section id="projects" className="py-24 relative">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Projetos Destaques</h2>
             <p className="text-muted-foreground">Alguns dos meus melhores trabalhos recentes.</p>
           </div>
-          <Button variant="ghost" className="text-primary hover:text-primary/80 hover:bg-primary/5">
+          <Button variant="ghost" className="text-primary hover:text-primary-foreground hover:bg-primary">
             Ver todos os projetos <ExternalLink className="ml-2 w-4 h-4" />
           </Button>
         </div>
@@ -57,16 +57,16 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
             >
-              <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white group h-full flex flex-col">
+              <Card className="overflow-hidden border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 bg-card/50 backdrop-blur-sm group h-full flex flex-col">
                 <div className="relative h-56 overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10" />
                   <img 
                     src={project.image} 
                     alt={project.title} 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4 z-20">
-                    <Badge className="bg-white/90 text-black hover:bg-white backdrop-blur-sm">
+                    <Badge className="bg-black/50 text-white hover:bg-black/70 backdrop-blur-md border border-white/10">
                       {project.category}
                     </Badge>
                   </div>
@@ -81,7 +81,7 @@ export default function Projects() {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
-                      <Badge key={tag} variant="secondary" className="bg-slate-100 text-slate-600 font-normal">
+                      <Badge key={tag} variant="secondary" className="bg-primary/10 text-primary-foreground/90 hover:bg-primary/20 border border-primary/20 font-normal">
                         {tag}
                       </Badge>
                     ))}
@@ -89,10 +89,10 @@ export default function Projects() {
                 </CardContent>
                 
                 <CardFooter className="p-6 pt-0 flex gap-3">
-                  <Button className="flex-1 bg-primary text-white hover:bg-primary/90 rounded-full">
+                  <Button className="flex-1 bg-primary text-white hover:bg-primary/90 hover:shadow-[0_0_15px_rgba(124,58,237,0.5)] transition-all rounded-full">
                     Ver Detalhes
                   </Button>
-                  <Button size="icon" variant="outline" className="rounded-full border-slate-200">
+                  <Button size="icon" variant="outline" className="rounded-full border-white/10 hover:bg-white/10 hover:text-white">
                     <Github className="w-4 h-4" />
                   </Button>
                 </CardFooter>

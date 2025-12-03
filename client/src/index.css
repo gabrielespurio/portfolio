@@ -36,58 +36,56 @@
 }
 
 :root {
-  /* Clean, professional light mode base */
-  --background: 210 40% 98%; /* Very light blue-grey tint */
-  --foreground: 222 47% 11%; /* Deep navy almost black */
+  /* Dark Neon Theme Base - Inspired by the Hero Section */
+  /* Background: Deep Navy/Indigo */
+  --background: 240 33% 10%; 
+  
+  /* Foreground: White/Off-white for text */
+  --foreground: 210 40% 98%;
 
-  /* Primary: The Deep Indigo/Purple from the reference */
-  --primary: 262 83% 58%; /* Vibrant Purple */
+  /* Primary: Electric Purple/Neon */
+  --primary: 262 80% 65%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: A softer blue for accents */
-  --secondary: 217 91% 60%;
+  /* Secondary: Electric Blue */
+  --secondary: 217 91% 65%;
   --secondary-foreground: 0 0% 100%;
 
-  /* Muted: For secondary text */
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
+  /* Muted: Darker grey-blue for secondary text */
+  --muted: 240 20% 20%;
+  --muted-foreground: 240 10% 70%;
 
-  /* Cards: Pure white with subtle border */
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+  /* Cards: Dark glass effect */
+  --card: 240 30% 14%;
+  --card-foreground: 210 40% 98%;
 
-  --accent: 210 40% 96%;
-  --accent-foreground: 222 47% 11%;
+  --accent: 262 50% 20%;
+  --accent-foreground: 210 40% 98%;
 
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 262 83% 58%;
+  --border: 240 30% 20%;
+  --input: 240 30% 20%;
+  --ring: 262 80% 65%;
 
   --radius: 0.5rem;
 }
 
+/* Keeping dark mode block same as root for consistency since we are forcing dark theme */
 .dark {
-  --background: 222 47% 11%;
+  --background: 240 33% 10%; 
   --foreground: 210 40% 98%;
-
-  --primary: 262 83% 65%;
+  --primary: 262 80% 65%;
   --primary-foreground: 0 0% 100%;
-
-  --secondary: 217 91% 60%;
+  --secondary: 217 91% 65%;
   --secondary-foreground: 0 0% 100%;
-
-  --muted: 217 16% 26%;
-  --muted-foreground: 215 20% 65%;
-
-  --card: 222 47% 13%;
+  --muted: 240 20% 20%;
+  --muted-foreground: 240 10% 70%;
+  --card: 240 30% 14%;
   --card-foreground: 210 40% 98%;
-
-  --accent: 217 16% 26%;
+  --accent: 262 50% 20%;
   --accent-foreground: 210 40% 98%;
-
-  --border: 217 16% 26%;
-  --input: 217 16% 26%;
-  --ring: 262 83% 65%;
+  --border: 240 30% 20%;
+  --input: 240 30% 20%;
+  --ring: 262 80% 65%;
 }
 
 @layer base {
@@ -107,6 +105,11 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
   }
   .bg-gradient-primary {
-    @apply bg-gradient-to-br from-[#1a1b4b] via-[#4c1d95] to-[#2563eb];
+    /* Updated to be slightly darker/richer to blend with the new dark theme */
+    @apply bg-gradient-to-br from-[#0f1035] via-[#3b1578] to-[#1e40af];
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
   }
 }

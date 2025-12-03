@@ -1,21 +1,24 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "React", icon: "⚛️", color: "bg-blue-100 text-blue-700 border-blue-200" },
-  { name: "Node.js", icon: "🟩", color: "bg-green-100 text-green-700 border-green-200" },
-  { name: "Flutter", icon: "🦋", color: "bg-sky-100 text-sky-700 border-sky-200" },
-  { name: "Android", icon: "🤖", color: "bg-emerald-100 text-emerald-700 border-emerald-200" },
-  { name: "iOS", icon: "🍎", color: "bg-gray-100 text-gray-800 border-gray-200" },
-  { name: "Python", icon: "🐍", color: "bg-yellow-100 text-yellow-700 border-yellow-200" },
-  { name: "SQL", icon: "🗄️", color: "bg-indigo-100 text-indigo-700 border-indigo-200" },
-  { name: "JavaScript", icon: "📜", color: "bg-amber-100 text-amber-700 border-amber-200" },
-  { name: "TypeScript", icon: "📘", color: "bg-blue-50 text-blue-600 border-blue-200" },
-  { name: "Next.js", icon: "▲", color: "bg-neutral-100 text-neutral-800 border-neutral-200" },
+  { name: "React", icon: "⚛️", color: "bg-blue-500/10 text-blue-300 border-blue-500/30" },
+  { name: "Node.js", icon: "🟩", color: "bg-green-500/10 text-green-300 border-green-500/30" },
+  { name: "Flutter", icon: "🦋", color: "bg-sky-500/10 text-sky-300 border-sky-500/30" },
+  { name: "Android", icon: "🤖", color: "bg-emerald-500/10 text-emerald-300 border-emerald-500/30" },
+  { name: "iOS", icon: "🍎", color: "bg-gray-500/10 text-gray-200 border-gray-500/30" },
+  { name: "Python", icon: "🐍", color: "bg-yellow-500/10 text-yellow-300 border-yellow-500/30" },
+  { name: "SQL", icon: "🗄️", color: "bg-indigo-500/10 text-indigo-300 border-indigo-500/30" },
+  { name: "JavaScript", icon: "📜", color: "bg-amber-500/10 text-amber-300 border-amber-500/30" },
+  { name: "TypeScript", icon: "📘", color: "bg-blue-600/10 text-blue-300 border-blue-600/30" },
+  { name: "Next.js", icon: "▲", color: "bg-white/5 text-white border-white/20" },
 ];
 
 export default function Skills() {
   return (
-    <section className="py-20 bg-background relative z-10">
+    <section className="py-20 relative z-10">
+      {/* Background glow effect */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-96 bg-primary/10 blur-[100px] -z-10 rounded-full pointer-events-none" />
+
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Minhas Habilidades</h2>
@@ -32,14 +35,14 @@ export default function Skills() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              whileHover={{ y: -5, scale: 1.05 }}
+              whileHover={{ y: -5, scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
               className={`
-                flex items-center gap-3 px-6 py-4 rounded-2xl border-2 cursor-default shadow-sm transition-colors
+                flex items-center gap-3 px-6 py-4 rounded-2xl border cursor-default backdrop-blur-sm transition-all
                 ${skill.color}
               `}
             >
-              <span className="text-2xl" role="img" aria-label={skill.name}>{skill.icon}</span>
-              <span className="font-semibold">{skill.name}</span>
+              <span className="text-2xl drop-shadow-md" role="img" aria-label={skill.name}>{skill.icon}</span>
+              <span className="font-semibold tracking-wide">{skill.name}</span>
             </motion.div>
           ))}
         </div>
