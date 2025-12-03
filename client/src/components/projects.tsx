@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import project1 from "@assets/generated_images/e-commerce_mobile_app_mockup.png";
+import project1 from "@assets/generated_images/service_marketplace_app_mockup.png";
 import project2 from "@assets/generated_images/corporate_website_mockup.png";
 import project3 from "@assets/generated_images/analytics_dashboard_mockup.png";
 
 const projects = [
   {
     id: 1,
-    title: "App Mobile - E-commerce",
+    title: "App Mobile - Marketplace de serviços",
     category: "Mobile Development",
     image: project1,
-    tags: ["Flutter", "Firebase", "Dart"],
-    description: "Aplicativo completo de compras com carrinho, pagamentos e rastreamento em tempo real.",
+    tags: ["React Native", "Figma", "Node.js", "SQL"],
+    description: "Plataforma completa conectando profissionais e clientes, com agendamento, pagamentos seguros e avaliações em tempo real.",
     year: "2024"
   },
   {
