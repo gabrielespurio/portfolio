@@ -73,8 +73,8 @@ export default function Hero() {
         </motion.div>
       </div>
       
-      {/* Wave separator at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-background" style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 100%)" }}></div>
+      {/* Gradient transition at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
     </section>
   );
 }
