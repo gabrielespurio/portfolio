@@ -153,17 +153,17 @@ export default function Contact() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   className="w-full"
                 >
-                  <Card className="p-12 bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl rounded-3xl flex flex-col items-center text-center hover:border-primary/30 transition-colors group cursor-pointer" onClick={handleStartChat}>
-                    <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                      <MessageSquare className="w-10 h-10 text-primary animate-pulse" />
+                  <Card className="p-8 bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl rounded-3xl flex flex-col items-center text-center hover:border-primary/30 transition-colors group cursor-pointer max-w-sm mx-auto" onClick={handleStartChat}>
+                    <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                      <MessageSquare className="w-8 h-8 text-primary animate-pulse" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">Assistente Virtual</h3>
-                    <p className="text-muted-foreground mb-8 max-w-xs">
+                    <h3 className="text-xl font-bold mb-3">Assistente Virtual</h3>
+                    <p className="text-muted-foreground mb-6 text-sm">
                       Clique abaixo para iniciar uma conversa interativa e me contar sobre seu projeto.
                     </p>
                     <Button 
                       onClick={handleStartChat}
-                      className="h-14 px-8 text-lg font-semibold bg-primary hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all rounded-full w-full max-w-xs"
+                      className="h-12 px-8 font-semibold bg-primary hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all rounded-full w-full"
                     >
                       Quero entrar em contato
                     </Button>
@@ -174,7 +174,7 @@ export default function Contact() {
                   key="chat-interface"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="w-full h-[500px] relative"
+                  className="w-full max-w-sm mx-auto h-[450px] relative"
                 >
                   <Card className="w-full h-full bg-[#0f1035]/90 border border-white/10 backdrop-blur-xl shadow-2xl rounded-3xl overflow-hidden flex flex-col">
                     {/* Chat Header */}
@@ -184,7 +184,7 @@ export default function Contact() {
                           <Bot className="w-6 h-6 text-primary" />
                         </div>
                         <div>
-                          <h3 className="font-bold text-white">Assistente Virtual</h3>
+                          <h3 className="font-bold text-white text-sm">Assistente Virtual</h3>
                           <div className="flex items-center gap-1.5">
                             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                             <span className="text-xs text-green-500 font-medium">Online</span>
@@ -195,14 +195,14 @@ export default function Contact() {
                         variant="ghost" 
                         size="icon" 
                         onClick={() => setIsChatOpen(false)}
-                        className="hover:bg-white/10 text-white/70 hover:text-white rounded-full"
+                        className="hover:bg-white/10 text-white/70 hover:text-white rounded-full h-8 w-8"
                       >
-                        <X className="w-5 h-5" />
+                        <X className="w-4 h-4" />
                       </Button>
                     </div>
 
                     {/* Chat Messages */}
-                    <div className="flex-1 overflow-y-auto p-6 space-y-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
+                    <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                       {messages.map((msg) => (
                         <motion.div
                           key={msg.id}
