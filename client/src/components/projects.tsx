@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import project1 from "@assets/generated_images/service_marketplace_app_mockup.png";
-import project2 from "@assets/generated_images/corporate_website_mockup.png";
+import project2 from "@assets/generated_images/burger_restaurant_landing_page_mockup.png";
 import project3 from "@assets/generated_images/analytics_dashboard_mockup.png";
 
 const projects = [
@@ -18,11 +18,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "Site Institucional - FinTech",
-    category: "Web Development",
+    title: "Landing Page - Hamburgueria Artesanal",
+    category: "Web Design",
     image: project2,
-    tags: ["React", "Tailwind", "Framer Motion"],
-    description: "Landing page de alta conversão para startup financeira com animações fluidas.",
+    tags: ["React", "Figma", "Tailwind"],
+    description: "Site moderno e apetitoso para hamburgueria gourmet, focado em conversão e experiência visual imersiva.",
     year: "2023"
   },
   {
