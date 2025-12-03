@@ -1,7 +1,6 @@
 import Hero from "@/components/hero";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";
-import Experience from "@/components/experience";
 import Contact from "@/components/contact";
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -38,7 +37,6 @@ export default function Home() {
         <Hero />
         <Skills />
         <Projects />
-        <Experience />
         <Contact />
       </main>
     </div>
