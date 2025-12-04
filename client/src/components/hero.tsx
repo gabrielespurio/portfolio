@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
-import profilePic from "@assets/generated_images/professional_developer_headshot.png";
+import profilePic from "@assets/_Image_7_1764856847485.png";
 
 export default function Hero() {
   return (
