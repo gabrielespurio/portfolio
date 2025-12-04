@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import project1 from "@assets/generated_images/beauty_franchise_management_app_mockup.png";
 import project2 from "@assets/generated_images/burger_restaurant_landing_page_mockup.png";
-import project3 from "@assets/generated_images/kids_party_business_management_dashboard.png";
+import project3 from "@assets/generated_images/elegant_business_management_dashboard.png";
 
 const projects = [
   {
