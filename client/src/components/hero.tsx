@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import profilePic from "@assets/_Image_7_1764856847485.png";
 
 export default function Hero() {
@@ -65,9 +65,10 @@ export default function Hero() {
               variant="outline" 
               size="lg" 
               className="border-white/30 text-white hover:bg-white/10 hover:text-white font-semibold rounded-full px-8 h-12 backdrop-blur-sm"
+              onClick={() => window.open('https://wa.me/5517992204822', '_blank')}
             >
-              Baixar CV
-              <Download className="ml-2 w-4 h-4" />
+              Entrar em contato
+              <MessageCircle className="ml-2 w-4 h-4" />
             </Button>
           </motion.div>
         </motion.div>
