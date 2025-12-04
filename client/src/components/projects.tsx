@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import project1 from "@assets/generated_images/beauty_franchise_management_app_mockup.png";
 import project2 from "@assets/generated_images/burger_restaurant_landing_page_mockup.png";
-import project3 from "@assets/generated_images/analytics_dashboard_mockup.png";
+import project3 from "@assets/generated_images/kids_party_business_management_dashboard.png";
 
 const projects = [
   {
@@ -27,11 +27,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "Dashboard Analytics",
+    title: "Web App - Gestão para Recreação Infantil",
     category: "Web App",
     image: project3,
-    tags: ["Next.js", "TypeScript", "Recharts"],
-    description: "Painel administrativo para visualização de dados complexos e gestão de métricas.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL"],
+    description: "Sistema de gestão empresarial para empresa de recreação e personagens infantis, com controle de agendamentos, gestão de figurinos, equipe de animadores e relatórios financeiros.",
     year: "2023"
   }
 ];
