@@ -143,7 +143,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center min-h-[450px]">
             <AnimatePresence mode="wait">
               {!isChatOpen ? (
                 <motion.div
@@ -151,7 +151,7 @@ export default function Contact() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className="w-full"
+                  className="w-full h-[450px] flex items-center"
                 >
                   <Card className="p-8 bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl rounded-3xl flex flex-col items-center text-center hover:border-primary/30 transition-colors group cursor-pointer max-w-sm mx-auto" onClick={handleStartChat}>
                     <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
