@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Send, MessageSquare, X, Bot, User } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import mascotImage from "@assets/Assistente_Robô_3D_(1)_1764859089879.png";
 
 interface Message {
   id: number;
@@ -154,8 +155,8 @@ export default function Contact() {
                   className="w-full h-[450px] flex items-center"
                 >
                   <Card className="p-8 bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl rounded-3xl flex flex-col items-center text-center hover:border-primary/30 transition-colors group cursor-pointer max-w-sm mx-auto" onClick={handleStartChat}>
-                    <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                      <MessageSquare className="w-8 h-8 text-primary animate-pulse" />
+                    <div className="w-28 h-28 mb-4 group-hover:scale-110 transition-transform duration-500">
+                      <img src={mascotImage} alt="Assistente Virtual" className="w-full h-full object-contain drop-shadow-lg" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">Assistente Virtual</h3>
                     <p className="text-muted-foreground mb-6 text-sm">
@@ -180,8 +181,8 @@ export default function Contact() {
                     {/* Chat Header */}
                     <div className="p-4 border-b border-white/10 flex items-center justify-between bg-white/5">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
-                          <Bot className="w-6 h-6 text-primary" />
+                        <div className="w-10 h-10 flex items-center justify-center">
+                          <img src={mascotImage} alt="Assistente" className="w-10 h-10 object-contain" />
                         </div>
                         <div>
                           <h3 className="font-bold text-white text-sm">Assistente Virtual</h3>
