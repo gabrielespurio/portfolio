@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import project1 from "@assets/generated_images/service_marketplace_app_mockup.png";
+import project1 from "@assets/generated_images/beauty_franchise_management_app_mockup.png";
 import project2 from "@assets/generated_images/burger_restaurant_landing_page_mockup.png";
 import project3 from "@assets/generated_images/analytics_dashboard_mockup.png";
 
