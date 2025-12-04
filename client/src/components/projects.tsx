@@ -9,11 +9,11 @@ import project3 from "@assets/generated_images/analytics_dashboard_mockup.png";
 const projects = [
   {
     id: 1,
-    title: "App Mobile - Marketplace de serviços",
+    title: "App Mobile - Gestão Empresarial para Franqueadora",
     category: "Mobile Development",
     image: project1,
     tags: ["React Native", "Figma", "Node.js", "SQL"],
-    description: "Plataforma completa conectando profissionais e clientes, com agendamento, pagamentos seguros e avaliações em tempo real.",
+    description: "Sistema completo de gestão para rede de franquias do segmento de beleza, integrando agendamentos, controle financeiro, gestão de equipes e relatórios em tempo real para salões e unidades franqueadas.",
     year: "2024"
   },
   {
