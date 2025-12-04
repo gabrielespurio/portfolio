@@ -3,33 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import project1 from "@assets/generated_images/service_marketplace_app_mockup.png";
-import project2 from "@assets/BurgerForce_1764857281710.png";
+import project2 from "@assets/generated_images/burger_restaurant_landing_page_mockup.png";
 import project3 from "@assets/generated_images/analytics_dashboard_mockup.png";
-
-function LaptopMockup({ image, alt }: { image: string; alt: string }) {
-  return (
-    <div className="relative w-full">
-      <div className="relative mx-auto" style={{ maxWidth: '100%' }}>
-        <div className="bg-gradient-to-b from-gray-700 to-gray-800 rounded-t-xl pt-2 px-2">
-          <div className="flex items-center gap-1.5 px-2 pb-1">
-            <div className="w-2 h-2 rounded-full bg-red-500" />
-            <div className="w-2 h-2 rounded-full bg-yellow-500" />
-            <div className="w-2 h-2 rounded-full bg-green-500" />
-          </div>
-          <div className="bg-gray-900 rounded-t-lg overflow-hidden">
-            <img 
-              src={image} 
-              alt={alt} 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-        <div className="bg-gradient-to-b from-gray-600 to-gray-700 h-3 rounded-b-lg" />
-        <div className="bg-gradient-to-b from-gray-500 to-gray-600 h-1 mx-auto rounded-b-xl" style={{ width: '40%' }} />
-      </div>
-    </div>
-  );
-}
 
 const projects = [
   {
@@ -39,8 +14,7 @@ const projects = [
     image: project1,
     tags: ["React Native", "Figma", "Node.js", "SQL"],
     description: "Plataforma completa conectando profissionais e clientes, com agendamento, pagamentos seguros e avaliações em tempo real.",
-    year: "2024",
-    mockupType: "none"
+    year: "2024"
   },
   {
     id: 2,
@@ -49,8 +23,7 @@ const projects = [
     image: project2,
     tags: ["React", "Figma", "Tailwind"],
     description: "Site moderno e apetitoso para hamburgueria gourmet, focado em conversão e experiência visual imersiva.",
-    year: "2023",
-    mockupType: "laptop"
+    year: "2023"
   },
   {
     id: 3,
@@ -59,8 +32,7 @@ const projects = [
     image: project3,
     tags: ["Next.js", "TypeScript", "Recharts"],
     description: "Painel administrativo para visualização de dados complexos e gestão de métricas.",
-    year: "2023",
-    mockupType: "none"
+    year: "2023"
   }
 ];
 
@@ -96,27 +68,19 @@ export default function Projects() {
                 <div className="relative flex flex-col md:flex-row gap-6 lg:gap-8 bg-[#0f1035] p-6 md:p-8 rounded-2xl border border-white/10 h-full">
                   
                   {/* Image Section */}
-                  <div className="w-full md:w-1/2 relative rounded-xl overflow-hidden md:aspect-auto group-hover:shadow-2xl transition-all duration-500 flex items-center justify-center">
-                    <div className="absolute top-3 left-3 z-20">
+                  <div className="w-full md:w-1/2 relative rounded-xl overflow-hidden aspect-video md:aspect-auto group-hover:shadow-2xl transition-all duration-500">
+                     <div className="absolute top-3 left-3 z-20">
                       <Badge className="bg-black/60 text-white backdrop-blur-md border border-white/10">
                         {project.year}
                       </Badge>
                     </div>
-                    {project.mockupType === "laptop" ? (
-                      <div className="w-full p-4 transform group-hover:scale-105 transition-transform duration-700">
-                        <LaptopMockup image={project.image} alt={project.title} />
-                      </div>
-                    ) : (
-                      <>
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                        />
-                        {/* Overlay gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </>
-                    )}
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    />
+                    {/* Overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
                   {/* Content Section */}
