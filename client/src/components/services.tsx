@@ -248,25 +248,6 @@ export default function Services() {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-sm rounded-full p-2 pl-6 border border-white/10">
-            <span className="text-white/80 text-sm">Precisa de uma solução personalizada?</span>
-            <Button 
-              className="bg-white text-primary hover:bg-gray-100 font-semibold rounded-full px-6"
-              onClick={() => window.open('https://wa.me/5517992204822', '_blank')}
-              data-testid="button-custom-solution"
-            >
-              Vamos conversar
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
