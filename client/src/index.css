@@ -3,33 +3,23 @@
 
 @custom-variant dark (&:is(.dark *));
 
-* {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-*::-webkit-scrollbar {
-  display: none;
-}
-
 html {
   overflow-x: hidden;
+  overflow-y: scroll;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   overflow-x: hidden;
-  touch-action: pan-y pan-x;
+  overflow-y: scroll;
+  min-height: 100%;
+  touch-action: manipulation;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none;
 }
 
-section, main, .container {
-  touch-action: pan-y pan-x;
-}
-
-[class*="overflow-hidden"] {
-  touch-action: pan-y pan-x;
+#root {
+  min-height: 100%;
 }
 
 @theme inline {
