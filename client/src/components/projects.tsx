@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import project1 from "@assets/generated_images/beauty_franchise_management_app_mockup.png";
 import project2 from "@assets/generated_images/burger_restaurant_landing_page_mockup.png";
 import project3 from "@assets/generated_images/elegant_business_management_dashboard.png";
@@ -92,22 +92,12 @@ export default function Projects() {
                       </p>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 mb-8">
+                    <div className="flex flex-wrap gap-2">
                       {project.tags.map(tag => (
                         <Badge key={tag} variant="secondary" className="bg-white/5 text-blue-100 border border-white/10 font-medium px-3 py-1">
                           {tag}
                         </Badge>
                       ))}
-                    </div>
-
-                    <div className="flex gap-4 mt-auto">
-                      <Button className="bg-white text-primary hover:bg-gray-100 font-semibold rounded-full px-6 group/btn">
-                        Ver Detalhes
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
-                      <Button size="icon" variant="outline" className="rounded-full border-white/20 hover:bg-white/10 hover:text-white text-white/70">
-                        <Github className="w-5 h-5" />
-                      </Button>
                     </div>
                   </div>
                 </div>
