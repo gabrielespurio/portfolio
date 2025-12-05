@@ -259,10 +259,6 @@ export default function Contact() {
 
         </div>
       </div>
-      
-      <footer className="absolute bottom-0 w-full py-6 text-center text-muted-foreground text-sm border-t border-white/10 mt-12">
-        <p>© {new Date().getFullYear()} Gabriel Espurio. Todos os direitos reservados.</p>
-      </footer>
     </section>
   );
 }
