@@ -1,4 +1,5 @@
 import Hero from "@/components/hero";
+import Services from "@/components/services";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
@@ -26,15 +27,16 @@ export default function Home() {
         </div>
         <div className="hidden md:flex gap-8 text-sm font-medium text-muted-foreground">
           <a href="#" className="hover:text-primary transition-colors">Home</a>
+          <a href="#services" className="hover:text-primary transition-colors">Serviços</a>
           <a href="#projects" className="hover:text-primary transition-colors">Projetos</a>
-          <a href="#" className="hover:text-primary transition-colors">Habilidades</a>
-          <a href="#" className="hover:text-primary transition-colors">Sobre</a>
-          <a href="#" className="hover:text-primary transition-colors">Contato</a>
+          <a href="#skills" className="hover:text-primary transition-colors">Habilidades</a>
+          <a href="#contact" className="hover:text-primary transition-colors">Contato</a>
         </div>
       </nav>
 
       <main>
         <Hero />
+        <Services />
         <Skills />
         <Projects />
         <Contact />
