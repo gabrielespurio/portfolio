@@ -41,6 +41,10 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
+
+      <footer className="w-full py-6 text-center text-muted-foreground text-sm border-t border-white/10 bg-background">
+        <p>© {new Date().getFullYear()} Gabriel Espurio. Todos os direitos reservados.</p>
+      </footer>
     </div>
   );
 }
