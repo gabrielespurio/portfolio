@@ -2,55 +2,58 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
-  LayoutDashboard, 
-  Smartphone, 
-  Brain, 
-  MessageSquareText, 
-  Bot,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  Bot
 } from "lucide-react";
 
-const services = [
+import iconGestao from "@assets/Gemini_Generated_Image_f453ohf453ohf453_1764948813807.png";
+import iconMobile from "@assets/Gemini_Generated_Image_fb4vbvfb4vbvfb4v_1764948813808.png";
+import iconIA from "@assets/Gemini_Generated_Image_6eljzi6eljzi6elj_1764948813806.png";
+import iconChatbot from "@assets/Gemini_Generated_Image_dhol0zdhol0zdhol_1764948813806.png";
+
+type ServiceType = {
+  id: number;
+  image?: string;
+  icon?: typeof Bot;
+  title: string;
+  description: string;
+  features: string[];
+  gradient: string;
+};
+
+const services: ServiceType[] = [
   {
     id: 1,
-    icon: LayoutDashboard,
+    image: iconGestao,
     title: "Sistemas de Gestão",
     description: "Soluções completas para gerenciamento empresarial, desde controle financeiro até gestão de equipes e processos.",
     features: ["ERP Personalizado", "Dashboards", "Relatórios"],
     gradient: "from-violet-500 to-purple-600",
-    iconBg: "bg-violet-500/20",
-    iconColor: "text-violet-400"
   },
   {
     id: 2,
-    icon: Smartphone,
+    image: iconMobile,
     title: "Aplicativos Móveis",
     description: "Apps nativos e híbridos para iOS e Android, com foco em performance e experiência do usuário.",
     features: ["React Native", "iOS & Android", "UI/UX"],
     gradient: "from-blue-500 to-cyan-500",
-    iconBg: "bg-blue-500/20",
-    iconColor: "text-blue-400"
   },
   {
     id: 3,
-    icon: Brain,
+    image: iconIA,
     title: "Sistemas com IA",
     description: "Integração de inteligência artificial para automatizar processos e gerar insights valiosos.",
     features: ["Machine Learning", "Análise Preditiva", "Automação"],
     gradient: "from-pink-500 to-rose-500",
-    iconBg: "bg-pink-500/20",
-    iconColor: "text-pink-400"
   },
   {
     id: 4,
-    icon: MessageSquareText,
+    image: iconChatbot,
     title: "Chatbots",
     description: "Chatbots inteligentes para atendimento 24/7, integrados às principais plataformas de comunicação.",
     features: ["WhatsApp", "Telegram", "Web Chat"],
     gradient: "from-emerald-500 to-teal-500",
-    iconBg: "bg-emerald-500/20",
-    iconColor: "text-emerald-400"
   },
   {
     id: 5,
@@ -59,8 +62,6 @@ const services = [
     description: "Agentes autônomos de atendimento com processamento de linguagem natural e aprendizado contínuo.",
     features: ["NLP Avançado", "Multi-canal", "Self-learning"],
     gradient: "from-amber-500 to-orange-500",
-    iconBg: "bg-amber-500/20",
-    iconColor: "text-amber-400"
   }
 ];
 
@@ -85,6 +86,23 @@ const itemVariants = {
     }
   }
 };
+
+function ServiceIcon({ service }: { service: ServiceType }) {
+  if (service.image) {
+    return (
+      <img 
+        src={service.image} 
+        alt={service.title}
+        className="w-full h-full object-cover rounded-xl"
+      />
+    );
+  }
+  if (service.icon) {
+    const Icon = service.icon;
+    return <Icon className="w-7 h-7 text-amber-400" />;
+  }
+  return null;
+}
 
 export default function Services() {
   return (
@@ -131,8 +149,8 @@ export default function Services() {
               <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-75 blur-sm transition-all duration-500`} />
               
               <div className="relative h-full bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col">
-                <div className={`w-14 h-14 ${service.iconBg} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 border border-white/10`}>
-                  <service.icon className={`w-7 h-7 ${service.iconColor}`} />
+                <div className="w-16 h-16 rounded-xl overflow-hidden mb-5 group-hover:scale-110 transition-transform duration-300 border border-white/10">
+                  <ServiceIcon service={service} />
                 </div>
 
                 <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
@@ -183,8 +201,8 @@ export default function Services() {
               
               <div className="relative h-full bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col">
                 <div className="flex items-start gap-4">
-                  <div className={`w-14 h-14 ${service.iconBg} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 border border-white/10`}>
-                    <service.icon className={`w-7 h-7 ${service.iconColor}`} />
+                  <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 group-hover:scale-110 transition-transform duration-300 border border-white/10 flex items-center justify-center bg-amber-500/20">
+                    <ServiceIcon service={service} />
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
