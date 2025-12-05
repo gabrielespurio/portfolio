@@ -12,8 +12,24 @@
   display: none;
 }
 
-html, body {
+html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  touch-action: pan-y pan-x;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+}
+
+section, main, .container {
+  touch-action: pan-y pan-x;
+}
+
+[class*="overflow-hidden"] {
+  touch-action: pan-y pan-x;
 }
 
 @theme inline {

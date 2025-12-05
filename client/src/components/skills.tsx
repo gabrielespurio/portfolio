@@ -61,9 +61,8 @@ export default function Skills() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              whileHover={{ y: -5, scale: 1.02 }}
               className={`
-                flex flex-col items-center justify-center gap-4 p-8 rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(124,58,237,0.2)] group
+                flex flex-col items-center justify-center gap-4 p-8 rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(124,58,237,0.2)] group hover:-translate-y-1 hover:scale-[1.02]
                 ${skill.color}
               `}
             >
