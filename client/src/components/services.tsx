@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { 
   ArrowRight,
   Sparkles,
-  Bot
+  Bot,
+  Globe
 } from "lucide-react";
 
 import iconGestao from "@assets/Gemini_Generated_Image_f453ohf453ohf453_1764948813807.png";
@@ -57,6 +58,14 @@ const services: ServiceType[] = [
   },
   {
     id: 5,
+    icon: Globe,
+    title: "Landing Pages",
+    description: "Páginas de alta conversão para captura de leads e vendas, com design moderno e otimização para resultados.",
+    features: ["Alta Conversão", "SEO", "Responsivo"],
+    gradient: "from-indigo-500 to-purple-500",
+  },
+  {
+    id: 6,
     icon: Bot,
     title: "Agentes Inteligentes",
     description: "Agentes autônomos de atendimento com processamento de linguagem natural e aprendizado contínuo.",
@@ -189,9 +198,9 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-10%" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
         >
-          {services.slice(3, 5).map((service) => (
+          {services.slice(3, 6).map((service) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -202,7 +211,7 @@ export default function Services() {
               
               <div className="relative h-full bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col">
                 <div className="flex items-start gap-4">
-                  <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center bg-amber-500/20">
+                  <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center bg-white/10">
                     <ServiceIcon service={service} />
                   </div>
                   <div className="flex-grow">
