@@ -87,22 +87,20 @@ const itemVariants = {
   }
 };
 
-function ServiceIcon({ service, size = "normal" }: { service: ServiceType; size?: "normal" | "large" }) {
+function ServiceIcon({ service }: { service: ServiceType }) {
   if (service.image) {
     return (
       <img 
         src={service.image} 
         alt={service.title}
-        className="w-full h-full object-contain"
-        style={{ imageRendering: 'auto' }}
+        className="w-full h-full object-cover rounded-xl"
         loading="eager"
       />
     );
   }
   if (service.icon) {
     const Icon = service.icon;
-    const iconSize = size === "large" ? "w-10 h-10" : "w-8 h-8";
-    return <Icon className={`${iconSize} text-amber-400`} />;
+    return <Icon className="w-10 h-10 text-amber-400" />;
   }
   return null;
 }
@@ -152,8 +150,8 @@ export default function Services() {
               <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-75 blur-sm transition-all duration-500`} />
               
               <div className="relative h-full bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col">
-                <div className="w-20 h-20 rounded-2xl overflow-hidden mb-5 group-hover:scale-105 transition-transform duration-300 bg-white/5 p-1">
-                  <ServiceIcon service={service} size="large" />
+                <div className="w-20 h-20 rounded-xl overflow-hidden mb-5 group-hover:scale-105 transition-transform duration-300">
+                  <ServiceIcon service={service} />
                 </div>
 
                 <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
@@ -204,8 +202,8 @@ export default function Services() {
               
               <div className="relative h-full bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col">
                 <div className="flex items-start gap-4">
-                  <div className="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center bg-white/5 p-1">
-                    <ServiceIcon service={service} size="large" />
+                  <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center bg-amber-500/20">
+                    <ServiceIcon service={service} />
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
