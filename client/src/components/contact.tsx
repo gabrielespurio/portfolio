@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Send, MessageSquare, X, Bot, User } from "lucide-react";
+import { Mail, Phone, Github, Instagram, Send, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import mascotImage from "@assets/Assistente_Robô_3D_(1)_1764859089879.png";
 
@@ -124,19 +124,10 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm group-hover:border-primary/50 group-hover:bg-primary/10 transition-all">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Localização</p>
-                  <p className="font-medium text-foreground">São Paulo, Brasil</p>
-                </div>
-              </div>
             </div>
 
             <div className="flex gap-4">
-              {[Github, Linkedin, Twitter, Instagram].map((Icon, i) => (
+              {[Github, Instagram].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
                   <Icon className="w-5 h-5" />
                 </a>
