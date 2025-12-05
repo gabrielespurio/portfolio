@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import profilePic from "@assets/_Image_7_1764856847485.png";
 
 export default function Hero() {
@@ -68,7 +69,7 @@ export default function Hero() {
               onClick={() => window.open('https://wa.me/5517992204822', '_blank')}
             >
               Entrar em contato
-              <MessageCircle className="ml-2 w-4 h-4" />
+              <SiWhatsapp className="ml-2 w-4 h-4" />
             </Button>
           </motion.div>
         </motion.div>
