@@ -33,7 +33,7 @@ const skills = [
     color: "bg-purple-500/10 text-purple-300 border-purple-500/20 hover:border-purple-500/50" 
   },
   { 
-    name: "SQL", 
+    name: "PostgreSQL", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
     color: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20 hover:border-indigo-500/50" 
   },

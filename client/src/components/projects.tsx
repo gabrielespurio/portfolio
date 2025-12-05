@@ -12,7 +12,7 @@ const projects = [
     title: "App Mobile - Gestão Empresarial para Franqueadora",
     category: "Mobile Development",
     image: project1,
-    tags: ["React Native", "Figma", "Node.js", "SQL"],
+    tags: ["React Native", "Figma", "Node.js", "PostgreSQL"],
     description: "Sistema completo de gestão para rede de franquias do segmento de beleza, integrando agendamentos, controle financeiro, gestão de equipes e relatórios em tempo real para salões e unidades franqueadas.",
     year: "2024"
   },
