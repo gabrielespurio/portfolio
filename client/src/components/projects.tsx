@@ -69,11 +69,6 @@ export default function Projects() {
                   
                   {/* Image Section */}
                   <div className="w-full md:w-1/2 relative rounded-xl overflow-hidden aspect-video md:aspect-auto group-hover:shadow-2xl transition-all duration-500">
-                     <div className="absolute top-3 left-3 z-20">
-                      <Badge className="bg-black/60 text-white backdrop-blur-md border border-white/10">
-                        {project.year}
-                      </Badge>
-                    </div>
                     <img 
                       src={project.image} 
                       alt={project.title} 
