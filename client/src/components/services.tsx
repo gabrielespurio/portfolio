@@ -156,7 +156,7 @@ export default function Services() {
               className="group relative"
               data-testid={`card-service-${service.id}`}
             >
-              <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-75 blur-sm transition-all duration-500`} />
+              <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-75 blur-sm transition-all duration-500 pointer-events-none`} />
               
               <div className="relative h-full bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col">
                 <div className="w-20 h-20 rounded-xl overflow-hidden mb-5 group-hover:scale-105 transition-transform duration-300">
@@ -207,7 +207,7 @@ export default function Services() {
               className="group relative"
               data-testid={`card-service-${service.id}`}
             >
-              <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-75 blur-sm transition-all duration-500`} />
+              <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-75 blur-sm transition-all duration-500 pointer-events-none`} />
               
               <div className="relative h-full bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col">
                 <div className="flex items-start gap-4">

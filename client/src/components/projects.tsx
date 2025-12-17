@@ -63,7 +63,7 @@ export default function Projects() {
               <div className="w-full md:w-[85%] lg:w-[75%] relative group">
                 
                 {/* Neon Gradient Border Effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-blue-500 rounded-2xl opacity-75 blur-sm group-hover:opacity-100 transition duration-500 group-hover:blur-md animate-pulse" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-blue-500 rounded-2xl opacity-75 blur-sm group-hover:opacity-100 transition duration-500 group-hover:blur-md animate-pulse pointer-events-none" />
                 
                 <div className="relative flex flex-col md:flex-row gap-6 lg:gap-8 bg-[#0f1035] p-6 md:p-8 rounded-2xl border border-white/10 h-full">
                   
@@ -75,7 +75,7 @@ export default function Projects() {
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                     />
                     {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </div>
 
                   {/* Content Section */}

@@ -68,7 +68,7 @@ export default function Skills() {
             >
               <div className="w-16 h-16 flex items-center justify-center relative">
                  {/* Glow behind icon */}
-                 <div className="absolute inset-0 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                 <div className="absolute inset-0 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                  
                  <img 
                   src={skill.customIcon || skill.icon} 
