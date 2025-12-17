@@ -91,8 +91,8 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-background to-[#0f1035] text-white relative overflow-visible">
        {/* Decorative circles */}
-       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
-       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl pointer-events-none" />
+       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl pointer-events-none" />
+       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full translate-x-1/3 translate-y-1/3 blur-2xl pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
@@ -145,7 +145,7 @@ export default function Contact() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   className="w-full h-[450px] flex items-center"
                 >
-                  <Card className="p-8 bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl rounded-3xl flex flex-col items-center text-center hover:border-primary/30 transition-colors group cursor-pointer max-w-sm mx-auto" onClick={handleStartChat}>
+                  <Card className="p-8 bg-card border border-white/10 shadow-xl rounded-3xl flex flex-col items-center text-center hover:border-primary/30 transition-colors group cursor-pointer max-w-sm mx-auto" onClick={handleStartChat}>
                     <div className="w-28 h-28 mb-4 group-hover:scale-110 transition-transform duration-500">
                       <img src={mascotImage} alt="Assistente Virtual" className="w-full h-full object-contain drop-shadow-lg" />
                     </div>
@@ -168,7 +168,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   className="w-full max-w-sm mx-auto h-[450px] relative"
                 >
-                  <Card className="w-full h-full bg-[#0f1035]/90 border border-white/10 backdrop-blur-xl shadow-2xl rounded-3xl overflow-hidden flex flex-col">
+                  <Card className="w-full h-full bg-card border border-white/10 shadow-xl rounded-3xl overflow-hidden flex flex-col">
                     {/* Chat Header */}
                     <div className="p-4 border-b border-white/10 flex items-center justify-between bg-white/5">
                       <div className="flex items-center gap-3">

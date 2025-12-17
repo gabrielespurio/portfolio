@@ -1,27 +1,24 @@
+import { lazy, Suspense } from "react";
 import Hero from "@/components/hero";
-import Services from "@/components/services";
-import Skills from "@/components/skills";
-import Projects from "@/components/projects";
-import Contact from "@/components/contact";
-import { motion, useScroll, useSpring } from "framer-motion";
+
+const Services = lazy(() => import("@/components/services"));
+const Skills = lazy(() => import("@/components/skills"));
+const Projects = lazy(() => import("@/components/projects"));
+const Contact = lazy(() => import("@/components/contact"));
+
+function SectionLoader() {
+  return (
+    <div className="py-24 flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
+}
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-
   return (
     <div className="bg-background font-sans selection:bg-primary/30">
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
-        style={{ scaleX }}
-      />
 
-      <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-white/10 h-16 flex items-center justify-between px-6 md:px-12 transition-all duration-300">
+      <nav className="fixed top-0 w-full z-40 bg-background/95 border-b border-white/10 h-16 flex items-center justify-between px-6 md:px-12">
         <div className="font-display font-bold text-xl tracking-tighter text-foreground">
           &lt;GE /&gt;
         </div>
@@ -36,10 +33,18 @@ export default function Home() {
 
       <main>
         <Hero />
-        <Services />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Suspense fallback={<SectionLoader />}>
+          <Services />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Skills />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Projects />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Contact />
+        </Suspense>
       </main>
 
       <footer className="w-full py-6 text-center text-muted-foreground text-sm border-t border-white/10 bg-background">

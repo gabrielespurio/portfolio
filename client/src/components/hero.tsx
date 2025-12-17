@@ -8,9 +8,9 @@ export default function Hero() {
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-x-clip bg-gradient-primary text-white pt-20 pb-32">
       {/* Abstract shapes background */}
-      <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500 rounded-full blur-3xl" />
+      <div className="absolute inset-0 overflow-hidden opacity-15 pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-purple-500 rounded-full blur-2xl" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500 rounded-full blur-2xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 text-center">
@@ -21,7 +21,7 @@ export default function Hero() {
           className="flex flex-col items-center"
         >
           <div className="relative mb-8 group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full opacity-75 blur transition duration-1000 group-hover:opacity-100 animate-pulse" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full opacity-60 blur-sm group-hover:opacity-80 transition-opacity duration-300" />
             <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
               <img 
                 src={profilePic} 

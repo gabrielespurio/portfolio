@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 const skills = [
   { 
@@ -43,7 +42,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 relative z-10">
       {/* Background glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-96 bg-primary/10 blur-[100px] -z-10 rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-96 bg-primary/5 blur-3xl -z-10 rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -55,29 +54,24 @@ export default function Skills() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {skills.map((skill, index) => (
-            <motion.div
+            <div
               key={skill.name}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
               className={`
-                flex flex-col items-center justify-center gap-4 p-8 rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(124,58,237,0.2)] group hover:-translate-y-1 hover:scale-[1.02]
+                flex flex-col items-center justify-center gap-4 p-8 rounded-2xl border transition-all duration-200 group hover:-translate-y-1
                 ${skill.color}
               `}
             >
               <div className="w-16 h-16 flex items-center justify-center relative">
-                 {/* Glow behind icon */}
-                 <div className="absolute inset-0 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-                 
                  <img 
                   src={skill.customIcon || skill.icon} 
                   alt={skill.name} 
-                  className="w-12 h-12 object-contain relative z-10 drop-shadow-lg"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-12 h-12 object-contain relative z-10"
                  />
               </div>
               <span className="font-semibold tracking-wide text-lg">{skill.name}</span>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
