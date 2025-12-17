@@ -41,7 +41,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="py-24 relative z-10">
+    <section id="skills" className="py-24 relative z-10">
       {/* Background glow effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-96 bg-primary/10 blur-[100px] -z-10 rounded-full pointer-events-none" />
 
