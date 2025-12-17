@@ -4,31 +4,38 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Hide scrollbar but keep scroll functionality */
-* {
-  scrollbar-width: none !important; /* Firefox */
-  -ms-overflow-style: none !important; /* IE and Edge */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
-*::-webkit-scrollbar {
-  display: none !important; /* Chrome, Safari, Opera */
-  width: 0 !important;
-  height: 0 !important;
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
 }
 
 html {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-behavior: smooth;
-  min-height: 100vh;
-  -webkit-overflow-scrolling: touch;
+  height: auto;
+  min-height: 100%;
 }
 
 body {
   overflow-x: hidden;
-  overflow-y: visible;
-  min-height: 100vh;
-  touch-action: pan-y pinch-zoom;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  min-height: 100%;
+  height: auto;
+  position: relative;
+}
+
+#root {
+  min-height: 100%;
+  height: auto;
+  overflow: visible;
 }
 
 @theme inline {
