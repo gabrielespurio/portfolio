@@ -6,7 +6,7 @@ import profilePic from "@assets/_Image_7_1764856847485.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-primary text-white pt-20 pb-32">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-x-clip bg-gradient-primary text-white pt-20 pb-32">
       {/* Abstract shapes background */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-purple-500 rounded-full blur-3xl" />

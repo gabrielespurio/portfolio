@@ -15,12 +15,19 @@
   height: 0 !important;
 }
 
-html, body {
+html {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   min-height: 100vh;
-  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: visible;
+  min-height: 100vh;
+  touch-action: pan-y pinch-zoom;
   -webkit-overflow-scrolling: touch;
 }
 

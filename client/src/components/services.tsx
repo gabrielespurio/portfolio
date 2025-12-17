@@ -116,7 +116,7 @@ function ServiceIcon({ service }: { service: ServiceType }) {
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="py-24 relative overflow-x-clip">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-[-10%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl" />
