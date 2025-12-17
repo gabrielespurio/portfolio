@@ -42,9 +42,11 @@ export default function Hero() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight">
               Gabriel Espurio<br/>Fernandes
             </h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-light">
-              Transformando ideias complexas em soluções digitais elegantes e funcionais. 
-              Especialista em criar experiências memoráveis.
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4 font-light">
+              Transformo ideias em soluções digitais modernas e funcionais
+            </p>
+            <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mb-10 font-light">
+              Desenvolvimento web e mobile focado em performance, qualidade e resultado para o seu negócio.
             </p>
           </motion.div>
 
